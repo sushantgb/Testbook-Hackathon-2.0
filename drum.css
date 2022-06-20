@@ -1,0 +1,247 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@400;500&family=Bungee+Hairline&family=Geostar&family=Yatra+One&display=swap');
+
+/* defining variable */
+:root{
+    --theme-col: #39FA60;
+    --bg-col: rgb(0,0,0);
+    --btn-font-col: #fff;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-col);
+    font-family:  'Yatra One', cursive;
+
+}
+
+/* --------------- Main styling -------------------- */
+
+/* container div styling  */
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin: 6em 1em 1em 1em;
+    border: solid var(--theme-col);
+    padding: 0.5em;
+    padding-bottom: 1em;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1em;
+    color:var(--theme-col);
+    border-radius: 0.2em;
+}
+
+/* heading div styling */
+.head {
+    font-size: 2em;
+    font-weight: bolder;
+    letter-spacing: 0.1em;
+}
+
+.head img {
+    width: 4em;
+    height: 4em;
+}
+
+/* drum kit div styling  */
+.drum-div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+}
+
+/* drum kit buttons styling */
+.drum-div button {
+    font-family: 'Geostar', cursive;
+    width: 3em;
+    height: 3em;
+    text-transform: uppercase;
+    border-radius: 0.15em;
+    font-size: 3em;
+    font-weight: bolder;
+    text-shadow: 2px 2px var(--theme-col);
+    background-color: var(--btn-font-col);
+}
+
+/* background image for each button*/
+.high-tom{
+    background: url(Images/high.jpg) no-repeat;
+    background-position: center;
+    background-size: 105%;
+}
+.medium-tom{
+    background: url(Images/Medium-tom.jpg) no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+.low-floor-tom{
+    background: url(Images/floor-tom.jpg) no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+.snare-drum{
+    background: url(Images/Snare-Drum.jpg) no-repeat;
+    background-position: center;
+    background-size: 80%;
+}
+.bass-drum{
+    background: url(Images/bass-drum.jpg) no-repeat;
+    background-position: center;
+    background-size: 80%;
+}
+.crash-cymbal{
+    background: url(Images/Crash-Cymbal.jpeg) no-repeat;
+    background-position: center;
+    background-size: 80%;
+}
+.ride-cymbal{
+    background: url(Images/Ride-Cymbal.jpg) no-repeat;
+    background-position: center;
+    background-size: 80%;
+}
+.hi-hats{
+    background: url(Images/Hi-Hat.jpg) no-repeat;
+    background-position: center;
+    background-size: 80%;
+}
+/* .......... */
+
+/* footer div */
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 1em;
+    border: solid var(--theme-col);
+    color: var(--theme-col);
+    border-radius: 0.2em;
+    padding: 0.5em;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    letter-spacing: 0.1em;
+}
+
+/* animation class when button is pressed  */
+.animation-buttons {
+    border: solid thick var(--theme-col);
+}
+
+
+/* ---------------- Responsive styling --------------------- */
+
+
+/* --- responsiveness settings ---- */
+
+/* for surface Duo gadgets */
+@media screen and (max-width:600px) {
+    .container {
+        margin: 1em;
+    }
+    .drum-div button{
+        font-size: 2.4em;
+    }
+}
+
+/* for gadgets with dimension ranging from minimum height 800px but width ranges to maximum 800px */
+@media screen and (max-width:800px) and (min-height:800px) {
+    .container {
+        margin: 1em;
+    }
+
+    .head {
+        font-size: 1em;
+    }
+}
+
+/* for gadgets with dimension ranges upto max height 800px and width ranges from minimum 281px to maximum 380px */
+@media screen and (min-width:281px) and (max-width:380px) and (max-height:800px) {
+    .container {
+        margin: 1em;
+    }
+
+    .head {
+        font-size: 1em;
+    }
+
+    .drum-div button {
+        width: 2em;
+        height: 2em;
+    }
+
+    .drum-div {
+        gap: 0.2em;
+        padding: 0.1em;
+    }
+}
+
+/* for gadgets with maximum width 280px and height 800px */
+@media screen and (max-width:280px) and (max-height:800px) {
+    .container {
+        margin: 1em;
+    }
+
+    .head {
+        font-size: 1em;
+    }
+
+    .drum-div button {
+        width: 4.2em;
+        height: 4.2em;
+        font-size: 1em;
+    }
+
+    .drum-div {
+        gap: 0.2em;
+        padding: 0.1em;
+    }
+}
+
+/* setting for longer gadgets */
+@media screen and (min-width:710px) and (min-height:1000px) {
+    .container {
+        margin: 1em;
+    }
+
+    .head {
+        font-size: 1.5em;
+    }
+
+    .drum-div button {
+        width: 4.1em;
+        height: 4.1em;
+    }
+
+    .drum-div {
+        gap: 1em;
+        padding: 0.1em;
+    }
+}
+
+/* settings for wider gadgets */
+@media screen and (min-width:1000px) and (max-height:650px) {
+    .container {
+        margin: 1em;
+    }
+    .head {
+        font-size: 1.5em;
+        text-transform: uppercase;
+    }
+    .drum-div {
+        gap: 0.5em;
+    }
+    .drum-div button{
+        font-size: 2.3em;
+    }
+}
+
+/* ------------ xxxx ---------- */
